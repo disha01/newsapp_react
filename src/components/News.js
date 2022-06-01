@@ -1,0 +1,163 @@
+import React, { Component } from 'react'
+import Newsitem from './Newsitem'
+
+export class News extends Component {
+    articles = [
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Life could exist on planet orbiting 'white dwarf' star",
+            "description": "Experts may have detected a planet in the habitable zone of a nearly dead star called a white dwarf.",
+            "url": "http://www.bbc.co.uk/news/science-environment-60325010",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/B401/production/_123218064_untitled6.png",
+            "publishedAt": "2022-02-11T12:37:21.3718392Z",
+            "content": "By Pallab GhoshScience correspondent\r\nImage source, Mark A. Garlick \r\nImage caption, Artist's impression of a planet orbiting a white dwarf star. Could it sustain life?\r\nResearchers believe there may… [+2221 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Cressida Dick: Search for new Met Police chief under way after resignation",
+            "description": "The home secretary clashed with the mayor of London over the resignation, the BBC is told.",
+            "url": "http://www.bbc.co.uk/news/uk-england-60345334",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/D8CE/production/_123220555_hi073706196.jpg",
+            "publishedAt": "2022-02-11T11:22:23.9465166Z",
+            "content": "By Becky MortonBBC News\r\nMedia caption, Met Police chief Cressida Dick resigns with \"sadness and regret\"\r\nThe search for a new Metropolitan Police Commissioner is under way after the resignation of D… [+5688 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Macron refused to take Russian Covid test",
+            "description": "A source says the health procedure was unacceptable amid reports France was protecting Mr Macron's DNA.",
+            "url": "http://www.bbc.co.uk/news/world-europe-60346300",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/16000/production/_123221109_mediaitem123221105.jpg",
+            "publishedAt": "2022-02-11T10:22:24.1023608Z",
+            "content": "Image caption, The four-metre table between Mr Putin and Mr Macron was widely commented upon\r\nFrench President Emmanuel Macron refused a Russian Covid test ahead of his meeting with Russia's Vladimir… [+2307 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC Sport",
+            "title": "Valieva failed drug test confirmed",
+            "description": "The International Testing Agency confirms teenage Russian Olympic Committee figure skater Kamila Valieva failed a drugs test in December.",
+            "url": "http://www.bbc.co.uk/sport/winter-olympics/60329120",
+            "urlToImage": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/17D91/production/_123218679_mediaitem123218678.jpg",
+            "publishedAt": "2022-02-11T04:22:26.415454Z",
+            "content": "Valieva has continued to practice for her individual event\r\nThe International Testing Agency has confirmed teenage Russian figure skater, Kamila Valieva, failed a drugs test in December.\r\nThe 15-year… [+1206 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Ice rescue training turns into real-life mission",
+            "description": "Two US teens fell through lake ice - luckily for them firefighters were training nearby for just such a rescue.",
+            "url": "http://www.bbc.co.uk/news/world-us-canada-60342078",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/D46D/production/_123218345_p0bnjyyv.jpg",
+            "publishedAt": "2022-02-11T02:37:23.1962998Z",
+            "content": "Firefighters were doing ice rescue training when two teenagers fell through the ice in a Missouri lake. Drone footage captured the dramatic mission to bring the boys safely back to shore. \r\nFire offi… [+215 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Ukraine tensions: Joe Biden says US citizens should leave Ukraine now",
+            "description": "The US president says he has issued the warning due to \"increased threats of Russian military action\".",
+            "url": "http://www.bbc.co.uk/news/world-europe-60342814",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/C851/production/_123218215_mediaitem123218051.jpg",
+            "publishedAt": "2022-02-11T02:22:19.9349595Z",
+            "content": "Image source, AFP via Getty Images\r\nImage caption, Ukrainian forces have been carrying out exercises amid concerns of a Russian invasion\r\nUS President Joe Biden has called on all American citizens re… [+5160 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "The deaths that came in the cold",
+            "description": "The Patels seemed to have a stable life in India. Why did they die trying to illegally cross the US-Canada border?",
+            "url": "http://www.bbc.co.uk/news/world-us-canada-60290955",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/4855/production/_123171581_borderplain_3top.jpg",
+            "publishedAt": "2022-02-11T00:37:29.312841Z",
+            "content": "By Holly Honderich &amp; Roxy GagdekarBBC News, Manitoba\r\nThe night Vaishaliben Patel, her husband Jagdish and their two children set out for the US-Canadian border they dressed in new heavy winter c… [+11030 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Her boyfriend killed her son but she went to jail",
+            "description": "Rebecca Hogue's partner killed her son, but she is the one in jail for 'failure to protect' her child.",
+            "url": "http://www.bbc.co.uk/news/world-us-canada-60326621",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/CD47/production/_123215525_microsoftteams-image-62copy.png",
+            "publishedAt": "2022-02-11T00:37:26.8528233Z",
+            "content": "By Robin Levinson-KingBBC News\r\nImage caption, Rebecca Hogue and her son Jeremiah \"Ryder\" Johnson\r\nRebecca Hogue's boyfriend beat her toddler son to death while she was at work. So why is she the one… [+14262 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Freedom Convoy: US offers Canada support to end truck protest",
+            "description": "White House officials say the Canadians must \"resolve\" the blockade, which is choking a US trade route.",
+            "url": "http://www.bbc.co.uk/news/world-us-canada-60342800",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/11923/production/_123217917_gettyimages-1369825313.jpg",
+            "publishedAt": "2022-02-11T00:37:23.5880093Z",
+            "content": "Image source, Getty Images\r\nUS officials have urged the Canadian government to use its federal powers to end the ongoing protests over vaccine mandates, White House officials say. \r\nPresident Joe Bid… [+4133 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Oregon man takes own life after misfire at bear kills brother",
+            "description": "The man accidentally shoots his brother while loading a gun to aim at a bear on their property.",
+            "url": "http://www.bbc.co.uk/news/world-us-canada-60342175",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/C973/production/_123217515_gettyimages-506289332.jpg",
+            "publishedAt": "2022-02-10T22:22:23.2282913Z",
+            "content": "Image source, Getty Images\r\nImage caption, Some 25,000 black bears live in Oregon\r\nAn Oregon man took his own life after accidentally shooting his brother while loading a gun to fire at a bear on the… [+1319 chars]"
+        }
+    ]
+    constructor() {
+        super();
+        this.state = {
+            articles:this.articles,
+            loading:false
+        }
+    }
+    render() {
+        return (
+            <div className='container my-3 mx-3'>
+                <h3>news today</h3>
+               
+                <div className='row'>
+                {this.state.articles.map((element)=>{
+                    return   <div className='col-md-3' key={element.url}>
+                    <Newsitem   title={element.title} description={element.description} imageurl={element.urlToImage}  Newsurl={element.url} />
+                </div>
+                })}
+                   
+                    
+                </div>
+            </div>
+        )
+    }
+}
+
+export default News
